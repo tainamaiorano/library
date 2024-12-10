@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Amiko&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Painel de Administração - Biblioteca</title>
+</head>
+
+<body>
+    <header class="admin-header">
+        <button class="menu-btn" aria-label="Abrir menu">&#9776;</button>
+        <div class="header-content">
+            <img src="../images/v15_137.png" alt="Logo" class="logo-image">
+            <h1 class="header-title">BIBLIOTECA</h1>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Pedidos</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="book-list">
+    <div class="book-item">
+        <div class="book-cover">
+            <img src="caminho-da-imagem-do-livro.jpg" alt="Capa do Livro">
+        </div>
+        <div class="book-details">
+            <p class="book-id">ID: 1043</p>
+            <p class="book-title">Título do Livro - detalhes na descrição</p>
+            <p class="book-category">Categoria: Literatura</p>
+        </div>
+        <div class="book-status">
+            <p>Status: Disponível</p>
+        </div>
+        <div class="book-quantity">
+            <p>1</p>
+        </div>
+        <div class="book-actions">
+            <button class="edit-btn">Editar</button>
+            <button class="delete-btn">Excluir</button>
+        </div>
+    </div>
+</div>
+
+    <script src="./js/admin.js"></script>
+</body>
+</html>

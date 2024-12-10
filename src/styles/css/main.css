@@ -1,0 +1,446 @@
+/* Reset básico para margens e paddings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo global */
+html, body {
+  font-family: 'Amiko', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Variáveis CSS para padronização */
+:root {
+  --padding-small: 10px;
+  --padding-medium: 20px;
+  --font-size-small: 0.9rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 2rem;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(48,74,67,1);
+  padding: var(--padding-medium);
+  color: white;
+}
+
+.logo-image {
+  width: 80px;
+  height: auto;
+}
+
+.title h1 {
+  font-family: 'Domine', serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: var(--padding-small);
+  font-size: var(--font-size-medium);
+  border-radius: 5px;
+  border: none;
+  margin-right: var(--padding-small);
+}
+
+.search img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Categorias */
+.categories {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--padding-medium);
+  background-color: rgba(24,40,36,1);
+}
+
+.category {
+  color: white;
+  text-decoration: none;
+  font-size: var(--font-size-medium);
+}
+
+.category.all {
+  font-weight: bold;
+}
+
+/* Grid de livros */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--padding-medium);
+  padding: var(--padding-medium);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.book-item {
+  background-color: #ddd;
+  padding: var(--padding-small);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.book-item:hover {
+  background-color: #ccc;
+  transform: scale(1.02);
+}
+
+.book-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.book-title {
+  margin-top: var(--padding-small);
+  font-size: var(--font-size-medium);
+  color: #333;
+  font-weight: bold;
+}
+
+/* Rodapé */
+.footer {
+  background-color: rgba(73,105,96,1);
+  text-align: center;
+  padding: var(--padding-medium);
+  color: white;
+  margin-top: auto;
+}
+
+/* Tela de Login */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: var(--padding-medium);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: rgba(48,74,67,1);
+  cursor: pointer;
+}
+
+.login-title {
+  font-family: 'Domine', serif;
+  font-size: var(--font-size-large);
+  color: rgba(48,74,67,1);
+  margin-bottom: var(--padding-medium);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: var(--padding-small);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-size: var(--font-size-medium);
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: var(--padding-small);
+  font-size: var(--font-size-medium);
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+/* Botão de login */
+.login-btn {
+  padding: var(--padding-small);
+  font-size: var(--font-size-medium);
+  background-color: rgba(48,74,67,1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: var(--padding-medium); /* Espaço acima do link de cadastro */
+}
+
+.login-btn:hover {
+  background-color: rgba(36,60,53,1);
+  transform: scale(1.05);
+}
+
+.register-link {
+  color: rgba(48,74,67,1);
+  text-decoration: underline;
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .logo-image {
+      margin-bottom: var(--padding-small);
+  }
+
+  .categories {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .category {
+      margin-bottom: var(--padding-small);
+  }
+
+  .login-container {
+    padding: var(--padding-small);
+  }
+
+  .login-title {
+    font-size: var(--font-size-medium);
+  }
+
+  .form-group input {
+    font-size: var(--font-size-small);
+  }
+
+  .login-btn {
+    font-size: var(--font-size-small);
+  }
+
+  .register-link {
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-title {
+    font-size: var(--font-size-small);
+  }
+
+  .form-group input {
+    font-size: var(--font-size-small);
+  }
+
+  .login-btn {
+    font-size: var(--font-size-small);
+  }
+
+  .register-link {
+    font-size: var(--font-size-small);
+  }
+}
+
+/* Cabeçalho do Admin */
+.admin-header {
+  display: flex;
+  align-items: center;
+  background-color: rgba(48,74,67,1);
+  padding: 20px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.logo-image {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.header-title {
+  font-family: 'Domine', serif;
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Inicialmente escondido */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(24,40,36,1);
+  color: white;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: rgba(48,74,67,0.8);
+  border-radius: 5px;
+}
+
+/* Main content area */
+.admin-main {
+  margin-left: 250px; /* Espaço para o sidebar */
+  padding: 20px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .admin-main {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px;
+  }
+}
+.book-list {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.book-item:last-child {
+    border-bottom: none;
+}
+
+.book-cover img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.book-details {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.book-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.book-category {
+    font-size: 14px;
+    color: #666;
+}
+
+.book-status, .book-price, .book-quantity, .book-actions {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.book-actions button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.book-actions .delete-btn {
+    background-color: #dc3545;
+}

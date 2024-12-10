@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala e a responsividade para dispositivos móveis -->
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Amiko&display=swap" rel="stylesheet" />
+    
+    <!-- Link para o arquivo CSS principal que contém as regras de estilo da página -->
+    <link href="./css/main.css" rel="stylesheet" />
+    
+    <title>Cadastro - Biblioteca</title> <!-- Define o título da página que aparece na aba do navegador -->
+</head>
+<body class="login-page"> <!-- Início do corpo da página, com uma classe "login-page" para estilização específica da página de login -->
+    <div class="login-container"> <!-- Contêiner central para a seção de login -->
+        
+        <!-- Botão de fechar (usualmente para fechar um modal, mas aqui está como um exemplo) -->
+        <button class="close-btn" aria-label="Fechar">&times;</button> 
+        
+        <h1 class="login-title">Login</h1> <!-- Título principal da seção de login -->
+        
+        <!-- Formulário de login -->
+        <form class="login-form">
+            <!-- Grupo de formulário para o campo de login -->
+            <div class="form-group">
+                <label for="name">Nome</label> <!-- Rótulo associado ao campo de texto de login -->
+                <input type="text" id="login" placeholder="Digite seu nome"> <!-- Campo de entrada de texto para o login do usuário -->
+            </div>
+
+            <!-- Grupo de formulário para o campo de login -->
+            <div class="form-group">
+                <label for="login">Login</label> <!-- Rótulo associado ao campo de texto de login -->
+                <input type="text" id="login" placeholder="Digite seu login"> <!-- Campo de entrada de texto para o login do usuário -->
+            </div>
+            
+            <!-- Grupo de formulário para o campo de senha -->
+            <div class="form-group">
+                <label for="password">Senha</label> <!-- Rótulo associado ao campo de senha -->
+                <input type="password" id="password" placeholder="Digite sua senha"> <!-- Campo de entrada de senha; o texto é oculto para segurança -->
+            </div>
+            
+            <div class="form-group">
+            <input type="checkbox" id="Termos" class="termos-checkbox"> 
+            <label for="Termos" class="termos-label">Concordo com os termos de uso</label>
+            </div>
+
+            <!-- Botão de submissão do formulário de login -->
+            <button type="submit" class="login-btn">Enviar</button>
+
+            
+        </form>
+    </div>
+</body>
+</html>
